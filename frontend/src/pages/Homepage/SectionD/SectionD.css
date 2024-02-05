@@ -1,0 +1,54 @@
+.feature-con h2 {
+  color: #f8f8f8;
+  font-family: var(--font-family);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.feature-benfits-con {
+  border-radius: 1.375rem;
+  border: 2px solid rgba(255, 255, 255, 0.64);
+  background: #292828;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2.375rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.feature-title {
+  color: #f1f1ef;
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.feature h4,
+.benefits h4,
+.feature p,
+.benefits p {
+  color: #ffd600;
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.feature p,
+.benefits p {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1529px) {
+  .feature-benfits-con {
+    height: 21.5625rem;
+  }
+}

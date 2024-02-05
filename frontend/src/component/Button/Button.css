@@ -1,0 +1,75 @@
+.default-button {
+  display: inline-flex;
+  padding: 0.5rem 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-family: var(--font-family-3);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  min-width: 115px;
+  gap: 10px;
+  outline: none;
+  border: none;
+}
+.default-button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sm {
+  height: 2.5rem;
+}
+.lg {
+  height: 3rem;
+}
+.xl {
+  height: 3.5rem;
+  padding: 0.8rem 1rem;
+}
+.prim {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: all 0.5s;
+}
+.prim:hover {
+  background-color: #3c0245;
+  color: #fff;
+}
+
+.sec {
+  border: 1px solid var(--primary-color);
+  color: #612b8d;
+}
+.sec:hover {
+  border: 1px solid #3c0245;
+  color: #612b8d;
+  background: #fceffe;
+}
+.darkbtn {
+  border: 1px solid #252525;
+  color: #000000;
+  background-color: transparent !important;
+}
+.darkbtn:hover {
+  border: 1px solid #252525;
+  color: #ffffff;
+  background: #252525 !important;
+}
+
+.err {
+  background-color: #f04b4b;
+}
+.succ {
+  background-color: #3cf870;
+}
+
+.purp {
+  border-radius: 0.25rem;
+  background: #f8e3fc;
+  padding: 0.625rem;
+  min-width: 84px !important;
+  color: #292828 !important;
+}

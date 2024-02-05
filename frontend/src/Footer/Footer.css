@@ -1,0 +1,19 @@
+.footer-con {
+  padding-top: 4.875rem;
+  padding-bottom: 2.875rem;
+}
+
+.footer-list ul {
+  list-style: none;
+}
+.footer-list ul li {
+  padding: 0.425rem 1rem;
+}
+.footer-list ul li a {
+  color: #6f6d6d;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

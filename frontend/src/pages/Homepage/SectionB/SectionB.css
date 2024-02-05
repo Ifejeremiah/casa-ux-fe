@@ -1,0 +1,25 @@
+.activity-card {
+  border-radius: 1.375rem;
+}
+.activities-con .card {
+  border-radius: 1.375rem !important;
+  border: none;
+}
+.activties-name {
+  top: unset !important;
+  width: 100%;
+}
+.activties-name .card-title {
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (min-width: 1188px) {
+  .activties-name .card-title {
+    font-size: 3rem;
+  }
+}

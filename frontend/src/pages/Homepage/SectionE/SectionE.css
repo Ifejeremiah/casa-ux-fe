@@ -1,0 +1,10 @@
+.instructor-header {
+  text-align: center;
+
+  color: #2e2d2d;
+  font-family: var(--font-family);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
