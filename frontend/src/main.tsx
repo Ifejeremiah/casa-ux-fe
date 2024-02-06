@@ -16,8 +16,8 @@ import SectionA from './pages/Signup/SectionA/SectionA.tsx'
 import SectionB from './pages/Signup/SectionB/SectionB.tsx'
 import Welcome from './pages/Welcomepage/Welcome.tsx'
 import Homepage from './pages/Homepage/Homepage.tsx'
-import DashBoardSectionA from './pages/DashboardPages/SectionA/DashBoardSectionA.tsx'
-import DashBoardSectionB from './pages/DashboardPages/SectionB/DashBoardSectionB.tsx'
+// import DashBoardSectionA from './pages/DashboardPages/SectionA/DashBoardSectionA.tsx'
+// import DashBoardSectionB from './pages/DashboardPages/SectionB/DashBoardSectionB.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,10 +29,10 @@ const router = createBrowserRouter(
       <Route element={<SectionA />} path="/signup:sectiona" />
       <Route element={<SectionB />} path="/signup:sectionb" />
       <Route element={<Welcome />} path="/welcome-dashboard" />
-      <Route path="/dashboard">
+      {/* <Route path="/dashboard">
         <Route element={<DashBoardSectionA />} path="/dashboard/SectionA" />
         <Route element={<DashBoardSectionB />} path="SectionB" />
-      </Route>
+      </Route> */}
     </Route>
   )
 )
