@@ -46,6 +46,7 @@ const SectionB = () => {
           <motion.div
             variants={item}
             id={index.toString()}
+            key={index}
             className="col-md-4 my-lg-0 my-4 "
           >
             <div className="card activity-card bg-dark text-white">
