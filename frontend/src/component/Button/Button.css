@@ -1,15 +1,15 @@
 .default-button {
   display: inline-flex;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.2rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
   font-family: var(--font-family-3);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem;
-  min-width: 115px;
+  min-width: 80px;
   gap: 10px;
   outline: none;
   border: none;
@@ -19,11 +19,8 @@
   height: 1.25rem;
 }
 
-.sm {
-  height: 2.5rem;
-}
 .lg {
-  height: 3rem;
+  height: 2.5rem;
 }
 .xl {
   height: 3.5rem;
@@ -61,6 +58,7 @@
 
 .err {
   background-color: #f04b4b;
+  color: #ffffff !important;
 }
 .succ {
   background-color: #3cf870;
@@ -69,7 +67,12 @@
 .purp {
   border-radius: 0.25rem;
   background: #f8e3fc;
-  padding: 0.625rem;
+  padding: 0.6rem;
   min-width: 84px !important;
   color: #292828 !important;
+}
+
+.sm {
+  padding: 4px 8px 4px 8px !important;
+  min-width: fit-content !important;
 }

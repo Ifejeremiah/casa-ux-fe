@@ -3,6 +3,7 @@ import SectionA from './SectionA/SectionA'
 import SectionB from './SectionB/SectionB'
 import SectionC from './SectionC/SectionC'
 import SectionE from './SectionE/SectionE'
+import SectionF from './SectionF/SectionF'
 const Homepage = () => {
   return (
     <section>
@@ -14,6 +15,7 @@ const Homepage = () => {
       <SectionC />
       <SectionD />
       <SectionE />
+      <SectionF />
     </section>
   )
 }

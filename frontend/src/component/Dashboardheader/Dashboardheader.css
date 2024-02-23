@@ -1,0 +1,99 @@
+.dashboard-info-header .welcome-text h3 {
+  font-family: var(--font-family-2);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.dashboard-info-header .welcome-text span {
+  font-size: 1.125rem;
+}
+.welcome-text p {
+  font-family: var(--font-family-2);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.search-bar-panel .search-bar-con {
+  height: 45px;
+  width: auto;
+  padding: 0.3rem;
+  border-radius: 1.375rem;
+  border: 2px solid #cfc5d080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.search-bar-panel .search-bar-con input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: var(--font-family-2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  transition: all 0.9s;
+}
+.search-bar-panel .search-bar-con input:focus {
+  padding-left: 20px;
+}
+
+.search-bar-panel .search-bar-con input::placeholder {
+  font-family: var(--font-family-2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.search-bar-panel .search-bar-con input:focus::placeholder {
+  text-align: start;
+}
+.profile-img-initial {
+  background: linear-gradient(
+      113.16deg,
+      rgba(227, 214, 243, 0.6) 18.04%,
+      rgba(203, 180, 234, 0.6) 85.07%
+    ),
+    linear-gradient(0deg, #f6f6f2, #f6f6f2);
+  border: 1px solid;
+
+  border-color: linear-gradient(
+    113.16deg,
+    rgba(227, 214, 243, 0.6) 18.04%,
+    rgba(203, 180, 234, 0.6) 85.07%
+  );
+  width: fit-content;
+  height: 100%;
+  padding: 7px 8px 7px 8px;
+  border-radius: 46px;
+  border: 1px;
+  gap: 8px;
+}
+.profile-img-initial .notification-icon {
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  background-color: #5f0d6c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.profile-img-initial .user-initial-img {
+  box-shadow: 0px 4px 7.300000190734863px 0px #00000040;
+  border: 2px solid #5f0d6c;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}

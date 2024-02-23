@@ -1,8 +1,53 @@
 import Button from '../../../component/Button/Button'
 import './SectionA.css'
 import { motion } from 'framer-motion'
+import { useFormik } from 'formik'
+
+interface FormikProps {
+  email: string
+  password: string
+}
+interface FormErrors {
+  email: string | null
+  password: string | null
+}
+
+const validate = (values: FormikProps): FormErrors => {
+  const errors: FormErrors = {
+    email: null,
+    password: null,
+  }
+
+  if (!values.email) {
+    errors.email = 'Email is Required'
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address'
+  } else {
+    errors.email = null // No error
+  }
+
+  // Validation for password field
+  if (!values.password) {
+    errors.password = 'Password is Required'
+  } else {
+    errors.password = null // No error
+  }
+
+  return errors
+}
 
 const SectionA = () => {
+  const formik = useFormik<FormikProps>({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2))
+    },
+  })
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -50,28 +95,47 @@ const SectionA = () => {
         >
           <motion.div className="login-box" variants={item}>
             <h3>Login</h3>
-            <form>
+            <form onSubmit={formik.handleSubmit}>
               <div className="input-con my-3">
                 <span>
                   <img src="/icons/User.svg" alt="" />
                 </span>
-                <input type="text" placeholder="Username" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  id="email"
+                  name="email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                />
               </div>
+              {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+
               <div className="input-con my-3">
                 <span>
                   <img src="/icons/Lock.png" alt="" />
                 </span>
-                <input type="password" placeholder="Password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  name="password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                />
               </div>
+              {formik.errors.password ? <p>{formik.errors.password}</p> : null}
+
               <div className="d-flex justify-content-between mt-2 flex-wrap">
                 <Button
                   btnSize="xl"
                   btnType="prim"
-                  isLink={true}
+                  isLink={false}
                   text="Login"
                   hasIcon={true}
                   icon="/icons/chevron-right.svg"
                   hasLeftIcon={false}
+                  isSubmit={true}
                 />
                 <a href="" className="link_text">
                   Forgot password?

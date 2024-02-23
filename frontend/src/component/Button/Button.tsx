@@ -11,6 +11,7 @@ interface ButtonProps {
   isLink: boolean
   hasIcon: boolean
   hasLeftIcon: boolean
+  isSubmit?: boolean
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void
   onMouseOver?: (event: MouseEvent<HTMLButtonElement>) => void
 }
@@ -22,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   isLink,
   hasIcon,
   hasLeftIcon,
+  isSubmit,
   to,
   onClick,
 }) => {
@@ -34,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
     </Link>
   ) : (
     <button
-      type="button"
+      type={isSubmit ? 'submit' : 'button'}
       className={`default-button ${btnType} ${btnSize}`}
       onClick={onClick}
     >

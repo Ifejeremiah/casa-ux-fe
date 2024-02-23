@@ -1,10 +1,22 @@
+import React from 'react'
 import Bootcamptag from '../Bootcamptag/Bootcamptag'
 import './DashboardSide.css'
-const DashboardSideBar = () => {
+import { Link } from 'react-router-dom'
+
+interface Dashboardprops {
+  isShown: boolean
+}
+const DashboardSideBar: React.FC<Dashboardprops> = ({ isShown }) => {
   return (
-    <div className="dashboardSidebar-con">
-      <div className="d-flex flex-column " style={{ gap: '2.5rem' }}>
-        <div className="logo px-4">
+    <div
+      className="dashboardSidebar-con"
+      style={{ display: isShown ? 'block' : 'none' }}
+    >
+      <div
+        className="d-flex flex-lg-column flex-row justify-content-between "
+        style={{ gap: '2.5rem' }}
+      >
+        <div className="logo ">
           <div>
             <a className="navbar-brand" href="#">
               <img src="/images/casa-ux.png" alt="" />
@@ -17,7 +29,7 @@ const DashboardSideBar = () => {
           <div className="purple-box">
             <ul>
               <li className="activeL">
-                <a href="">
+                <Link to={'/dashboard/SectionB'}>
                   <svg
                     width="24"
                     height="25"
@@ -50,7 +62,7 @@ const DashboardSideBar = () => {
                       fill="#F6F6F2"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="">
@@ -101,7 +113,7 @@ const DashboardSideBar = () => {
                 </a>
               </li>
               <li>
-                <a href="">
+                <Link to={'/dashboard/resoures'}>
                   <svg
                     width="16"
                     height="21"
@@ -124,7 +136,7 @@ const DashboardSideBar = () => {
                       fill="#5F0D6C"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

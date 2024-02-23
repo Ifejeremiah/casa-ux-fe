@@ -1,6 +1,6 @@
 import './Navbar.css'
 import Bootcamptag from '../component/Bootcamptag/Bootcamptag'
-import Button from '../component/Button/Button'
+// import Button from '../component/Button/Button'
 import { Link } from 'react-router-dom'
 import { useRef, useState } from 'react'
 
@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarType> = ({ isDarklogo, isShowned }) => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className={`nav-link ${
                   activeNavItem === 'SignUp' ? 'active' : ''
@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarType> = ({ isDarklogo, isShowned }) => {
                 hasIcon={false}
                 hasLeftIcon={false}
               />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

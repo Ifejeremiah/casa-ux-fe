@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../../../component/Button/Button'
-// import UserData from '../../../types/usersType'
 import { useNavigate } from 'react-router-dom'
 
 const SectionA = () => {
@@ -14,20 +13,11 @@ const SectionA = () => {
   const [seePassword, setSeePassword] = useState(false)
   const [seeConPassword, setSeeConPassword] = useState(false)
 
-  // const [formData, setFormData] = useState<UserData>({
-  //   first_name: '',
-  //   last_name: '',
-  //   email_address: '',
-  //   residential_address: '',
-  //   level_of_proficiency: '',
-  //   education_status: '',
-  // })
-
   interface FieldConfig {
     id: string
     name: string
     label: string
-    isDropdown?: boolean // Add this property for dropdown fields
+    isDropdown?: boolean
     isShown: boolean
     options?: string[]
     isPassword?: boolean
@@ -261,7 +251,7 @@ const SectionA = () => {
       // Perform form submission logic here for the remaining five fields
       console.log('Form submitted successfully!')
       console.log(formData)
-      navigate('/welcome-dashboard')
+      navigate('/welcome-home')
     }
   }
 
